@@ -28,4 +28,9 @@ class Clients extends Model
             'company_name',
             'client_type'
         ];
+
+        // Cria um relacionamento de muitos para um
+        public function soccerTeam(){
+            return $this->belongsTo(SoccerTeam::class);
+        }
     }
