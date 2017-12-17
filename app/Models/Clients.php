@@ -16,21 +16,23 @@ class Clients extends Model
     ];
 
     protected $fillable = [
-            'name',
-            'document_number',
-            'email',
-            'phone',
-            'defaulter',
-            'date_birth',
-            'sex',
-            'marital_status',
-            'physical_disability',
-            'company_name',
-            'client_type'
-        ];
+        'name',
+        'document_number',
+        'email',
+        'phone',
+        'defaulter',
+        'date_birth',
+        'sex',
+        'marital_status',
+        'physical_disability',
+        'company_name',
+        'client_type',
+        'soccer_team_id'
+    ];
 
-        // Cria um relacionamento de muitos para um
-        public function soccerTeam(){
-            return $this->belongsTo(SoccerTeam::class);
-        }
+    // Cria um relacionamento de muitos para um
+    public function soccerTeam()
+    {
+        return $this->belongsTo(SoccerTeam::class);
     }
+}
