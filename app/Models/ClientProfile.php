@@ -8,7 +8,7 @@ class ClientProfile extends Model
 {
     protected $fillable = [
         'field',
-        'client_id'
+        'clients_id'
     ];
 
     /**

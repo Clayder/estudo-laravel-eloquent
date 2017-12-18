@@ -16,8 +16,8 @@ class CreateClientProfilesTable extends Migration
         Schema::create('client_profiles', function (Blueprint $table) {
             $table->increments('id');
             $table->string('field');
-            $table->integer('client_id')->unsigned();
-            $table->foreign('client_id')->references('id')->on('clients');
+            $table->integer('clients_id')->unsigned();
+            $table->foreign('clients_id')->references('id')->on('clients');
             $table->timestamps();
         });
     }
