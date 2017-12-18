@@ -33,3 +33,9 @@ $factory->state(\App\Models\Clients::class, \App\Models\Clients::TYPE_LEGAL, fun
         'client_type' => \App\Models\Clients::TYPE_LEGAL
     ];
 });
+
+$factory->define(\App\Models\ClientProfile::class, function (Faker $faker) {
+    return [
+        'field' => $faker->name,
+    ];
+});
