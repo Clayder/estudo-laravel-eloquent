@@ -11,5 +11,13 @@ class ClientProfile extends Model
         'client_id'
     ];
 
+    /**
+     * Relacionamento One-to-many
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function client()
+    {
+        return $this->belongsTo(Clients::class);
+    }
 
 }
