@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class ClientProfile extends Model
 {
     protected $fillable = [
-        'field'
+        'field',
+        'client_id'
     ];
+
+
 }
