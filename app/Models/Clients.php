@@ -35,4 +35,13 @@ class Clients extends Model
     {
         return $this->belongsTo(SoccerTeam::class);
     }
+
+    /**
+     * Retorna o perfil que está associado a um cliente específico.
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function clientProfile()
+    {
+        return $this->hasOne(ClientProfile::class);
+    }
 }
