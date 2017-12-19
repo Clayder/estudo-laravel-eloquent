@@ -11,6 +11,6 @@ class SoccerTeamsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(\App\Models\SoccerTeam::class, 100)->create();
     }
 }
