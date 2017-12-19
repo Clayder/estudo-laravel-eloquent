@@ -11,6 +11,16 @@ class ClientProfilesTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        // Retorno os clientes
+        $clients = \App\Models\Clients::all();
+        $countClients = $clients->count();
+
+        $collectionIndividual = factory(\App\Models\ClientProfile::class, $countClients)->make();
+
+        $collectionIndividual->each(function ($clientProfile) use ($clients) {
+            // Atribuo um id aleatório
+            $clientProfile->clients_id = $clients->random()->id;
+            $clientProfile->save();
+        });
     }
 }
