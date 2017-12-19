@@ -12,7 +12,8 @@ class SoccerTeam extends Model
      * Retorna todos os clientes relacionado a um time
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function clients(){
+    public function clients()
+    {
         return $this->hasMany(Clients::class);
     }
 }

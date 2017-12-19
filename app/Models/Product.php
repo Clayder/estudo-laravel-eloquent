@@ -12,7 +12,8 @@ class Product extends Model
      * Realizo o relacionamento many-to-many com a tabela categories.
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function categories(){
+    public function categories()
+    {
         return $this->belongsToMany(Category::class);
     }
 }
